@@ -1,0 +1,23 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /test-task/payment
+spring:
+  application:
+    name: payment-application
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    password: tarelka12345
+    url: jdbc:postgresql://localhost:5432/payment-service?useUnicode=true&characterEncoding=utf-8&createDatabaseIfNotExist=true
+    username: postgres
+    driverClassName: org.postgresql.Driver
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
